@@ -488,6 +488,9 @@ a {
 	.services-columns {
 		padding-bottom: 0;
 	}
+	.services-title {
+		left: 0;
+	}
 	.services-images {
 		width: 325px;
 		height: 537px;
@@ -543,6 +546,9 @@ a {
 	display: block;
 	text-transform: uppercase;
 }
+.contact-description-highlight:nth-child(2) {
+	text-transform: none;
+}
 .contact-section:not(:first-child) {
 	margin-top: 50px;
 	padding-top: 25px;
@@ -588,4 +594,48 @@ a {
 	margin-top: -2px;
 	width: 35px;
 	max-width: 100%; 
+}
+@media (max-width: 1023px) {
+	.contact-description {
+		font-size: 16px;
+		line-height: 32px;
+	}
+	.contact-link {
+		font-size: 12px;
+	}
+	.contact-item:not(:first-child) {
+		margin-left: 25px;
+	}
+}
+@media (max-width: 767px) {
+	.contact-wrapper {
+		padding: 25px 25px 50px;
+		text-align: left;
+	}
+	.contact-title {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.contact-column {
+		display: block;
+	}
+	.contact-description {
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.contact-section:not(:first-child) {
+		margin-top: 50px;
+		padding-top: 50px;
+	}
+	.contact-item {
+		display: block;
+	}
+	.contact-item:not(:first-child) {
+		margin-left: 0;
+		margin-top: 5px;
+	}
+	.contact-link {
+		font-size: 12px;
+		line-height: 24px;
+	}
 }

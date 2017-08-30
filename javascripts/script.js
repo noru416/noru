@@ -234,7 +234,11 @@ $(document).on('click', '.navigation-link',function() {
 	$('.navigation-link.is-active').removeClass('is-active');
 	$(this).addClass('is-active');
 	renderSection();
-	$.cookie("section", $('.navigation-link.is-active').text());
+    
+    if ($(window).width() < 1024) {
+    	$('.navigation.is-active').removeClass('is-active');
+    }
+    $.cookie("section", $('.navigation-link.is-active').text());
 });	
 
 $('.languages-button').on('click', function() {
@@ -249,23 +253,32 @@ var animating = false;
 function animategalleryItem() {
 	animating = true;
 	var oldItem = $('.gallery-item.is-active');
+	var oldPagination = $('.gallery-pagination-button.is-active');
 	if (button.hasClass('gallery-navigation-button-next')) {
 		if (oldItem.is($('.gallery-item:last'))) {
 			newItem = $('.gallery-item:first');
+			newPagination = $('.gallery-pagination-button:first');
 		} else {
 			var newItem = oldItem.next();
+			var newPagination = oldPagination.next();
 		} 
 		
 	} else {
 		if (oldItem.is($('.gallery-item:first'))) {
 			newItem = $('.gallery-item:last');
+			newPagination = $('.gallery-pagination-button:last');
 		} else {
-			var newItem = oldItem.prev();	
+			var newItem = oldItem.prev();
+			var newPagination = oldPagination.prev();
 		}
 	}
 	
 	oldItem.removeClass('is-active');
 	newItem.addClass('is-active');
+
+	oldPagination.removeClass('is-active');
+	newPagination.addClass('is-active');
+
 	oldItem.css({
 		'z-index': 1,
 		'visibility': 'inherit',
