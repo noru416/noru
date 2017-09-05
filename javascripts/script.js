@@ -1,6 +1,45 @@
+$(document).ready(function() {
+	renderSection();
+});
+
+$(window).on('hashchange', function(e){
+	renderSection();
+});
+
+$(document).on('click', '.navigation-link',function() {
+	if($(this).hasClass('is-active')){
+      return false;
+    }
+	$('.navigation-link.is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+	renderSection();
+    
+    if ($(window).width() < 1024) {
+    	$('.navigation.is-active').removeClass('is-active');
+    }
+    preventScroll();
+});	
+
+$('.languages-button').on('click', function() {
+	$('.languages-button.is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+});
+$('.navigation-button').on('click', function() {
+	$('.navigation').toggleClass('is-active');
+	preventScroll();
+});
+
+$(document).on('click', '.gallery-navigation-button', function () {
+	button = $(this);
+	if (animating) {
+		return false;
+	} else {
+		animategalleryItem();
+	}
+});
+
 function renderSection() {
 	var newSection = $('.navigation-link.is-active').text();
-	
 	if ($('section').attr('class')) {
 		var oldSection = $('section');
 		oldSection.animate({
@@ -12,12 +51,15 @@ function renderSection() {
 	} else {
 		switchSection();
 	}
-	
 }
+
 function switchSection() {
 	var newSection = $('.navigation-link.is-active').text();
-	switch(newSection) {
-		case 'gallery': 
+	var hash = window.location.hash;
+	switch(hash) {
+		default :
+			$('.navigation-link.is-active').removeClass('is-active');
+			$(".navigation-link:contains('Home')").addClass('is-active');
 			$('.container').append(`
 				<section class="gallery">
 					<ul class="gallery-list">
@@ -65,7 +107,9 @@ function switchSection() {
 			},1000,'easeInOutCubic');
 			break;
 
-		case 'timeline': 
+		case '#/paintings': 
+			$('.navigation-link.is-active').removeClass('is-active');
+			$(".navigation-link:contains('Paintings')").addClass('is-active');
 			$('.container').append(`
 				<section class="services">
 					<div class="services-wrapper">
@@ -108,7 +152,7 @@ function switchSection() {
 				</section>
 			`);
 			$('.services-list').css({'opacity': 0});
-			$('.services-text').css({'transform': 'translateY(100px)'})
+			$('.services-text').css({'transform': 'translateY(100px)'});
 			$('.services-text').animate({transform: 'translateY(0)'}, 1000);
 			$('.services-list').animate({opacity: 1}, 500,'easeInOutCubic');
 			break;
@@ -161,7 +205,9 @@ function switchSection() {
 			$('.services-list').animate({opacity: 1}, 500,'easeInOutCubic');
 			break;
 
-		case 'contact':
+		case '#/contact':
+			$('.navigation-link.is-active').removeClass('is-active');
+			$(".navigation-link:contains('contact')").addClass('is-active');
 			$('.container').append(`
 				<section class="contact">
 					<div class="contact-wrapper">
@@ -185,7 +231,7 @@ function switchSection() {
 									</div>
 								</div>
 							</div>
-							<div class="contact-section">
+							<div class="contact-section a">
 								<span class="contact-section-line" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
 								<ul class="contact-list">
 									<li class="contact-item" style="visibility: inherit; opacity: 1;">
@@ -224,30 +270,23 @@ function switchSection() {
 					</div>
 				</section>
 			`)
+			$(".contact-title > span:contains('Keep')").css({'transform': 'translateY(50px)'});
+			$(".contact-title > span:contains('In')").css({'transform': 'translateY(50px)'});
+			$(".contact-title > span:contains('Touch')").css({'transform': 'translateY(50px)'});
+			$('.contact-colums').css({'opacity': 0});
+			$('.contact-section.a').css({'opacity': 0});
+			$(".contact-title > span:contains('Keep')").animate({transform: 'translateY(0)'}, 500, function() {
+				$(".contact-title > span:contains('In')").animate({transform: 'translateY(0)'}, 500, function() {
+					$(".contact-title > span:contains('Touch')").animate({transform: 'translateY(0)'}, 500, function() {
+						$('.contact-colums').animate({opacity: 1}, 500,'easeInOutCubic');
+						$('.contact-section.a').animate({opacity: 1}, 500,'easeInOutCubic');
+					});
+				});
+			});
 			break;
 	}
 }
-$(document).on('click', '.navigation-link',function() {
-	if($(this).hasClass('is-active')){
-      return false;
-    }
-	$('.navigation-link.is-active').removeClass('is-active');
-	$(this).addClass('is-active');
-	renderSection();
-    
-    if ($(window).width() < 1024) {
-    	$('.navigation.is-active').removeClass('is-active');
-    }
-    $.cookie("section", $('.navigation-link.is-active').text());
-});	
 
-$('.languages-button').on('click', function() {
-	$('.languages-button.is-active').removeClass('is-active');
-	$(this).addClass('is-active');
-});
-$('.navigation-button').on('click', function() {
-	$('.navigation').toggleClass('is-active');
-});
 
 var animating = false;
 function animategalleryItem() {
@@ -297,50 +336,12 @@ function animategalleryItem() {
 		newItem.removeAttr('style');
 		animating = false;
 	});
-	
 }
 
-$(document).on('click', '.gallery-navigation-button', function () {
-	button = $(this);
-	if (animating) {
-		return false;
+function preventScroll() {
+	if ($('.navigation').is('.is-active')) {
+		$('.container').css({'overflow-y': 'hidden'});
 	} else {
-		animategalleryItem();
-	}
-});
-
-function switchWithURL() {
-	var gallery = $('.navigation-link:contains("gallery")');
-	var timeline = $('.navigation-link:contains("timeline")');
-	var category = $('.navigation-link:contains("category")');
-	var contact = $('.navigation-link:contains("contact")');
-	$('.navigation-link').removeClass('is-active');
-	switch ($.cookie('hash')) {
-		case '#/gallery':
-			gallery.addClass('is-active');
-			break;
-		case '#/timeline':
-			timeline.addClass('is-active');
-			break;
-		case '#/category':
-			category.addClass('is-active');
-			break;
-		case '#/contact':
-			contact.addClass('is-active');
-			break;
-		default :
-			$(location).attr('hash', '#/gallery');
-			gallery.addClass('is-active');
-			break;
+		$('.container').css({'overflow-y': 'scroll'});
 	}
 }
-$(window).on('hashchange', function(e){
-	$.cookie('hash', $(location).attr('hash'));
-	switchWithURL();
-	renderSection();
-});
-
-$(document).ready(function() {
-	switchWithURL();
-	renderSection();
-});
