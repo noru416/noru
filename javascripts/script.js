@@ -222,12 +222,12 @@ function switchSection() {
 									<div class="contact-column">
 										<p class="contact-description">
 											<strong class="contact-description-highlight">Business Inquiries</strong>
-											<strong class="contact-description-highlight">business@dotcore.com.br</strong>
+											<strong class="contact-description-highlight">th3425xogm@gmail.com</strong>
 										</p>
 									</div>
 									<div class="contact-column">
 										<div class="contact-description">
-											<strong>If you have interest in contracting any of our services,<br>please contact us! We love new challenges... ;)</strong>
+											<strong>If you have interest in contracting any of my services,<br>please contact me! We love new challenges... ;)</strong>
 									</div>
 								</div>
 							</div>
@@ -235,31 +235,31 @@ function switchSection() {
 								<span class="contact-section-line" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
 								<ul class="contact-list">
 									<li class="contact-item" style="visibility: inherit; opacity: 1;">
-										<a href="https://www.facebook.com/dotcorestudio/" class="contact-link">
+										<a href="https://www.facebook.com/profile.php?id=100004700710917" class="contact-link">
 											<img src="images/facebook.svg" class="contact-icon">
 											<span class="contact-text">Facebook</span>
 										</a>
 									</li>
 									<li class="contact-item" style="visibility: inherit; opacity: 1;">
-										<a href="https://www.twitter.com/dotcorestudio/" class="contact-link">
+										<a href="https://twitter.com/th3425" class="contact-link">
 											<img src="images/twitter.svg" class="contact-icon">
 											<span class="contact-text">Twitter</span>
 										</a>
 									</li>
 									<li class="contact-item" style="visibility: inherit; opacity: 1;">
-										<a href="https://www.linkedin.com/company-beta/16248447" class="contact-link">
+										<a href="https://www.linkedin.com/in/r-nd-a95a39107/" class="contact-link">
 											<img src="images/linkedin.svg" class="contact-icon">
 											<span class="contact-text">LinkedIn</span>
 										</a>
 									</li>
 									<li class="contact-item" style="visibility: inherit; opacity: 1;">
-										<a href="https://www.vimeo.com/dotcorestudio/" class="contact-link">
+										<a href="https://vimeo.com/th3425" class="contact-link">
 											<img src="images/vimeo.svg" class="contact-icon">
 											<span class="contact-text">Vimeo</span>
 										</a>
 									</li>
 									<li class="contact-item" style="visibility: inherit; opacity: 1;">
-										<a href="https://www.instagram.com/dotcorestudio/" class="contact-link">
+										<a href="https://www.instagram.com/99.04.l6/" class="contact-link">
 											<img src="images/instagram.svg" class="contact-icon">
 											<span class="contact-text">Instagram</span>
 										</a>
