@@ -13,12 +13,12 @@ $(document).on('click', '.navigation-link',function() {
 	$('.navigation-link.is-active').removeClass('is-active');
 	$(this).addClass('is-active');
 	renderSection();
-    
+
     if ($(window).width() < 1024) {
     	$('.navigation.is-active').removeClass('is-active');
     }
     preventScroll();
-});	
+});
 
 $('.languages-button').on('click', function() {
 	$('.languages-button.is-active').removeClass('is-active');
@@ -107,7 +107,7 @@ function switchSection() {
 			},1000,'easeInOutCubic');
 			break;
 
-		case '#/paintings': 
+		case '#/projects': 
 			$('.navigation-link.is-active').removeClass('is-active');
 			$(".navigation-link:contains('Paintings')").addClass('is-active');
 			$('.container').append(`
@@ -156,7 +156,7 @@ function switchSection() {
 			$('.services-text').animate({transform: 'translateY(0)'}, 1000);
 			$('.services-list').animate({opacity: 1}, 500,'easeInOutCubic');
 			break;
-		
+
 		case 'category':
 			$('.container').append(`
 				<section class="services">
@@ -300,8 +300,8 @@ function animategalleryItem() {
 		} else {
 			var newItem = oldItem.next();
 			var newPagination = oldPagination.next();
-		} 
-		
+		}
+
 	} else {
 		if (oldItem.is($('.gallery-item:first'))) {
 			newItem = $('.gallery-item:last');
@@ -311,7 +311,7 @@ function animategalleryItem() {
 			var newPagination = oldPagination.prev();
 		}
 	}
-	
+
 	oldItem.removeClass('is-active');
 	newItem.addClass('is-active');
 
