@@ -113,17 +113,16 @@ function switchSection() {
 			$('.container').append(`
 				<section class="services">
 					<div class="services-wrapper">
-						<div class="sub-navigation">
-							<ul class="sub navigation-list">
-								<li><span class="navigation-link is-active">All</span></li>
-								<li><span class="navigation-link">Web</span></li>
-								<li><span class="navigation-link">iOS</span></li>
-								<li><span class="navigation-link">Painting</span></li>
+						<nav class="category-navigation">
+							<ul class="category-navigation-list">
+								<li><span class="category-navigation-link is-active">All</span></li>
+								<li><span class="category-navigation-link">Web</span></li>
+								<li><span class="category-navigation-link">iOS</span></li>
+								<li><span class="category-navigation-link">Painting</span></li>
 							</ul>
-						</div>
+						</nav>
 						<div class="services-column">
 							<div class="services-columns">
-								<div class="services-title"><span class="services-text">2016</span></div>
 								<ul class="services-list">
 									<div class="services-images vertical" style="background-image: url(images/zurich.jpg)"></div>
 									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
@@ -131,22 +130,12 @@ function switchSection() {
 									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
 									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
 									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-								</ul>
-							</div>
-							<div class="services-columns">
-								<div class="services-title"><span class="services-text">2017</span></div>
-								<ul class="services-list">
 									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
 									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
 									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
 									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
 									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
 									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-								</ul>
-							</div>
-							<div class="services-columns">
-								<div class="services-title"><span class="services-text">2018</span></div>
-								<ul class="services-list">
 									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
 									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
 									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
