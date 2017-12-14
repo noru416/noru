@@ -20,6 +20,11 @@ $(document).on('click', '.navigation-link',function() {
     preventScroll();
 });
 
+$(document).on('click', '.category-navigation-link',function() {
+	$('.category-navigation-link.is-active').removeClass('is-active');
+	$(this).addClass('is-active');
+});
+
 $('.languages-button').on('click', function() {
 	$('.languages-button.is-active').removeClass('is-active');
 	$(this).addClass('is-active');
