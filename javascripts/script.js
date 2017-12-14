@@ -107,12 +107,20 @@ function switchSection() {
 			},1000,'easeInOutCubic');
 			break;
 
-		case '#/projects': 
+		case '#/projects':
 			$('.navigation-link.is-active').removeClass('is-active');
-			$(".navigation-link:contains('Paintings')").addClass('is-active');
+			$(".navigation-link:contains('Projects')").addClass('is-active');
 			$('.container').append(`
 				<section class="services">
 					<div class="services-wrapper">
+						<div class="sub-navigation">
+							<ul class="sub navigation-list">
+								<li><span class="navigation-link is-active">All</span></li>
+								<li><span class="navigation-link">Web</span></li>
+								<li><span class="navigation-link">iOS</span></li>
+								<li><span class="navigation-link">Painting</span></li>
+							</ul>
+						</div>
 						<div class="services-column">
 							<div class="services-columns">
 								<div class="services-title"><span class="services-text">2016</span></div>
