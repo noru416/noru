@@ -21,7 +21,7 @@ $(document).on('click', '.navigation-link',function() {
 });
 
 $(document).on('click', '.spectrum-item',function() {
-	$('.spactrum-item.is-active').removeClass('is-active');
+	$('.spectrum-item.is-active').removeClass('is-active');
 	$(this).addClass('is-active');
 });
 
