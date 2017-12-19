@@ -155,17 +155,17 @@ a {
 .languages-button:hover {
 	opacity: 0.75;
 }
-.category-navigation {
+.spectrum {
 	width: 341px;
 	margin: 0 auto;
 	padding-top: 20px;
 }
-.category-navigation-list {
+.spectrum-list {
 	display: flex;
 	position: static;
 	justify-content: center;
 }
-.category-navigation-link {
+.spectrum-item {
 	font: 700 30px Raleway,sans-serif;
 	color: white;
 	text-decoration: none;
@@ -175,12 +175,12 @@ a {
 	display: block;
 	text-transform: uppercase;
 }
-.category-navigation-link:hover {
+.spectrum-item:hover {
 	color: white;
 	text-decoration: none;
 	opacity: 0.75;
 }
-.category-navigation-link.is-active {
+.spectrum-item.is-active {
 	opacity: 1;
 }
 @media (max-width: 1023px) {

@@ -118,12 +118,14 @@ function switchSection() {
 			$('.container').append(`
 				<section class="services">
 					<div class="services-wrapper">
-						<nav class="category-navigation">
-							<ul class="category-navigation-list">
-								<li><span class="category-navigation-link is-active">All</span></li>
-								<li><span class="category-navigation-link">Web</span></li>
-								<li><span class="category-navigation-link">iOS</span></li>
-								<li><span class="category-navigation-link">Painting</span></li>
+						<nav class="spectrum">
+							<ul class="spectrum-list">
+								<li><span class="spectrum-item is-active">All</span></li>
+								<li><span class="spectrum-item">Web</span></li>
+								<li><span class="spectrum-item">APP</span></li>
+								<li><span class="spectrum-item">Visual</span></li>
+								<li><span class="spectrum-item">Painting</span></li>
+								<li><span class="spectrum-item">Hardware</span></li>
 							</ul>
 						</nav>
 						<div class="services-column">
