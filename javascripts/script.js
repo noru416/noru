@@ -20,8 +20,8 @@ $(document).on('click', '.navigation-link',function() {
     preventScroll();
 });
 
-$(document).on('click', '.category-navigation-link',function() {
-	$('.category-navigation-link.is-active').removeClass('is-active');
+$(document).on('click', '.spactrum-item',function() {
+	$('.spactrum-item.is-active').removeClass('is-active');
 	$(this).addClass('is-active');
 });
 
