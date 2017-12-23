@@ -23,6 +23,7 @@ $(document).on('click', '.navigation-link',function() {
 $(document).on('click', '.spectrum-item',function() {
 	$('.spectrum-item.is-active').removeClass('is-active');
 	$(this).addClass('is-active');
+	alert($(this));
 });
 
 $('.languages-button').on('click', function() {
