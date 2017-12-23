@@ -20,7 +20,7 @@ $(document).on('click', '.navigation-link',function() {
     preventScroll();
 });
 
-$(document).on('click', '.spectrum-item',function() {
+$(document).on('touchstart click', '.spectrum-item',function() {
 	$('.spectrum-item.is-active').removeClass('is-active');
 	$(this).addClass('is-active');
 });
