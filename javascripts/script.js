@@ -23,7 +23,10 @@ $(document).on('click', '.navigation-link',function() {
 $(document).on('click', '.spectrum-item',function() {
 	$('.spectrum-item.is-active').removeClass('is-active');
 	$(this).addClass('is-active');
-	alert($(this));
+});
+$(document).on('click', '.spectrum-list > li',function() {
+	$('.spectrum-item.is-active').removeClass('is-active');
+	$(this).addClass('is-active');
 });
 
 $('.languages-button').on('click', function() {
