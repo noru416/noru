@@ -156,14 +156,11 @@ a {
 	opacity: 0.75;
 }
 .spectrum {
-	width: 341px;
-	margin: 0 auto;
+	display: inline-block;
 	padding-top: 20px;
 }
 .spectrum-list {
 	display: flex;
-	position: static;
-	justify-content: center;
 }
 .spectrum-item {
 	font: 700 30px Raleway,sans-serif;

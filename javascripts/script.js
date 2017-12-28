@@ -121,8 +121,8 @@ function switchSection() {
 						<nav class="spectrum">
 							<ul class="spectrum-list">
 								<li><span class="spectrum-item is-active">All</span></li>
-								<li><span class="spectrum-item">Web</span></li>
-								<li><span class="spectrum-item">iOS</span></li>
+								<li><span class="spectrum-item">Graphic</span></li>
+								<li><span class="spectrum-item">Dev</span></li>
 								<li><span class="spectrum-item">Artwork</span></li>
 							</ul>
 						</nav>
