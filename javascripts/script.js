@@ -224,7 +224,7 @@ function switchSection() {
 									<div class="contact-column">
 										<p class="contact-description">
 											<strong class="contact-description-highlight">Business Inquiries</strong>
-											<strong class="contact-description-highlight">th3425xogm@gmail.com</strong>
+											<strong class="contact-description-highlight"><a href="mailto:th3425xogm@gmail.com">th3425xogm@gmail.com</a></strong>
 										</p>
 									</div>
 									<div class="contact-column">
@@ -243,7 +243,7 @@ function switchSection() {
 										</a>
 									</li>
 									<li class="contact-item" style="visibility: inherit; opacity: 1;">
-										<a href="https://twitter.com/th3425" class="contact-link">
+										<a href="https://twitter.com/th3425xogm" class="contact-link">
 											<img src="images/twitter.svg" class="contact-icon">
 											<span class="contact-text">Twitter</span>
 										</a>
