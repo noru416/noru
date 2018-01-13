@@ -249,6 +249,7 @@ a {
 	.navigation.is-active .languages {
 		visibility: hidden;
 	}
+	
 }
 @media (max-width: 767px) {
 	.navigation-logo {
@@ -277,8 +278,15 @@ a {
 	.category-navigation-link {
 		font-size: 29px;
 	}
+	.spectrum-item {
+		font-size: 23px;
+	}
 }
-
+@media (max-width: 480px) {
+	.spectrum-item {
+		font-size: 19px;
+	}
+}
 .gallery {
 	position: absolute;
 	left: 50px;

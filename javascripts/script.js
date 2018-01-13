@@ -111,7 +111,11 @@ function switchSection() {
 				width: '100%'
 			},1000,'easeInOutCubic');
 			break;
-
+		case '#/gallery':
+			$('.navigation-link.is-active').removeClass('is-active');
+			$(".navigation-link:contains('Gallery')").addClass('is-active');
+			
+			break;
 		case '#/projects':
 			$('.navigation-link.is-active').removeClass('is-active');
 			$(".navigation-link:contains('Projects')").addClass('is-active');
