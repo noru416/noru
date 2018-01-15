@@ -111,14 +111,86 @@ function switchSection() {
 				width: '100%'
 			},1000,'easeInOutCubic');
 			break;
-		case '#/gallery':
-			$('.navigation-link.is-active').removeClass('is-active');
-			$(".navigation-link:contains('Gallery')").addClass('is-active');
-			
-			break;
 		case '#/projects':
 			$('.navigation-link.is-active').removeClass('is-active');
 			$(".navigation-link:contains('Projects')").addClass('is-active');
+			$('.container').append(`
+				<section class="services">
+						<div class="projects">
+							<div class="projects-wrapper">
+								<ul class="projects-list">
+									<li><span class="spectrum-item is-active">Modu School Seoul</span></li>
+									<li><span class="spectrum-item">SDF Design Report</span></li>
+									<li><span class="spectrum-item">Seoul Facilities Corporation</span></li>
+									<li><span class="spectrum-item">CIGNA Korea Foundation(leaflet)</span></li>
+									<li><span class="spectrum-item">2017 KU Crimson Brick</span></li>
+									<li><span class="spectrum-item">KU Sejong Magazine.36</span></li>
+									<li><span class="spectrum-item">Seoul Design Foundation Art Plan</span></li>
+									<li><span class="spectrum-item">CIGNA Korea Foundation</span></li>
+									<li><span class="spectrum-item">Seoul Metropolitan Government</span></li>
+									<li><span class="spectrum-item">Crimson Brick Campaign</span></li>
+									<li><span class="spectrum-item">KLRI 2017</span></li>
+									<li><span class="spectrum-item">MMCA. Art & Science</span></li>
+									<li><span class="spectrum-item">Artwork</span></li>
+									<li><span class="spectrum-item">Graphic</span></li>
+								</ul>
+								<ul class="projects-list">
+									<li><span class="spectrum-item is-active">Modu School Seoul</span></li>
+									<li><span class="spectrum-item">SDF Design Report</span></li>
+									<li><span class="spectrum-item">Seoul Facilities Corporation</span></li>
+									<li><span class="spectrum-item">CIGNA Korea Foundation(leaflet)</span></li>
+									<li><span class="spectrum-item">2017 KU Crimson Brick</span></li>
+									<li><span class="spectrum-item">KU Sejong Magazine.36</span></li>
+									<li><span class="spectrum-item">Seoul Design Foundation Art Plan</span></li>
+									<li><span class="spectrum-item">CIGNA Korea Foundation</span></li>
+									<li><span class="spectrum-item">Seoul Metropolitan Government</span></li>
+									<li><span class="spectrum-item">Crimson Brick Campaign</span></li>
+									<li><span class="spectrum-item">KLRI 2017</span></li>
+									<li><span class="spectrum-item">MMCA. Art & Science</span></li>
+									<li><span class="spectrum-item">Artwork</span></li>
+									<li><span class="spectrum-item">Graphic</span></li>
+								</ul>
+								<ul class="projects-list">
+									<li><span class="spectrum-item is-active">Modu School Seoul</span></li>
+									<li><span class="spectrum-item">SDF Design Report</span></li>
+									<li><span class="spectrum-item">Seoul Facilities Corporation</span></li>
+									<li><span class="spectrum-item">CIGNA Korea Foundation(leaflet)</span></li>
+									<li><span class="spectrum-item">2017 KU Crimson Brick</span></li>
+									<li><span class="spectrum-item">KU Sejong Magazine.36</span></li>
+									<li><span class="spectrum-item">Seoul Design Foundation Art Plan</span></li>
+									<li><span class="spectrum-item">CIGNA Korea Foundation</span></li>
+									<li><span class="spectrum-item">Seoul Metropolitan Government</span></li>
+									<li><span class="spectrum-item">Crimson Brick Campaign</span></li>
+									<li><span class="spectrum-item">KLRI 2017</span></li>
+									<li><span class="spectrum-item">MMCA. Art & Science</span></li>
+									<li><span class="spectrum-item">Artwork</span></li>
+									<li><span class="spectrum-item">Graphic</span></li>
+								</ul>
+								<ul class="projects-list">
+									<li><span class="spectrum-item is-active">Modu School Seoul</span></li>
+									<li><span class="spectrum-item">SDF Design Report</span></li>
+									<li><span class="spectrum-item">Seoul Facilities Corporation</span></li>
+									<li><span class="spectrum-item">CIGNA Korea Foundation(leaflet)</span></li>
+									<li><span class="spectrum-item">2017 KU Crimson Brick</span></li>
+									<li><span class="spectrum-item">KU Sejong Magazine.36</span></li>
+									<li><span class="spectrum-item">Seoul Design Foundation Art Plan</span></li>
+									<li><span class="spectrum-item">CIGNA Korea Foundation</span></li>
+									<li><span class="spectrum-item">Seoul Metropolitan Government</span></li>
+									<li><span class="spectrum-item">Crimson Brick Campaign</span></li>
+									<li><span class="spectrum-item">KLRI 2017</span></li>
+									<li><span class="spectrum-item">MMCA. Art & Science</span></li>
+									<li><span class="spectrum-item">Artwork</span></li>
+									<li><span class="spectrum-item">Graphic</span></li>
+								</ul>
+							</div>
+						</div>
+				</section>
+			`);
+			break;
+
+		case '#/gallery':
+			$('.navigation-link.is-active').removeClass('is-active');
+			$(".navigation-link:contains('Gallery')").addClass('is-active');
 			$('.container').append(`
 				<section class="services">
 					<div class="services-wrapper">
@@ -159,54 +231,6 @@ function switchSection() {
 			`);
 			$('.services-list').css({'opacity': 0});
 			$('.services-text').css({'transform': 'translateY(100px)'});
-			$('.services-text').animate({transform: 'translateY(0)'}, 1000);
-			$('.services-list').animate({opacity: 1}, 500,'easeInOutCubic');
-			break;
-
-		case 'category':
-			$('.container').append(`
-				<section class="services">
-					<div class="services-wrapper">
-						<div class="services-column">
-							<div class="services-columns">
-								<div class="services-title"><span class="services-text">Painting</span></div>
-								<ul class="services-list">
-									<div class="services-images vertical" style="background-image: url(images/zurich.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-									<div class="services-images" style="background-image: url(images/naturally-bizarre.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-								</ul>
-							</div>
-							<div class="services-columns">
-								<div class="services-title"><span class="services-text">Web</span></div>
-								<ul class="services-list">
-									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-								</ul>
-							</div>
-							<div class="services-columns">
-								<div class="services-title"><span class="services-text">Application</span></div>
-								<ul class="services-list">
-									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-									<div class="services-images" style="background-image: url(images/zurich.jpg)"></div>
-									<p class="services-images-caption">Zürich Metropolis<br>Oil on Canvas<br>1929 • 100×64cm</p>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-			`);
-			$('.services-list').css({'opacity': 0});
-			$('.services-text').css({'transform': 'translateY(100px)'})
 			$('.services-text').animate({transform: 'translateY(0)'}, 1000);
 			$('.services-list').animate({opacity: 1}, 500,'easeInOutCubic');
 			break;

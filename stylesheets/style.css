@@ -249,6 +249,9 @@ a {
 	.navigation.is-active .languages {
 		visibility: hidden;
 	}
+	.spectrum-item {
+		font-size: 23px;
+	}
 	
 }
 @media (max-width: 767px) {
@@ -277,9 +280,6 @@ a {
 	}
 	.category-navigation-link {
 		font-size: 29px;
-	}
-	.spectrum-item {
-		font-size: 23px;
 	}
 }
 @media (max-width: 480px) {
@@ -693,5 +693,29 @@ a {
 	.contact-link {
 		font-size: 12px;
 		line-height: 24px;
+	}
+}
+.projects {
+	display: flex;
+	padding: 50px 50px 0 50px;
+	text-align: left;
+
+}
+.projects-list {
+	display: inline-block;
+	width: 20%;
+	padding-right: 60px;
+}
+.projects-list li {
+	text-align: left;
+}
+@media (max-width: 1860px) {
+	.projects-list {
+		width: 28%;
+	}
+}
+@media (max-width: 1355px) {
+	.projects-list {
+		width: 40%;
 	}
 }
