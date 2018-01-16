@@ -697,7 +697,7 @@ a {
 	}
 }
 .projects {
-	padding-top: 60px;
+	padding: 60px 0;
 }
 .projects-wrapper {
 	display: flex;
@@ -706,7 +706,8 @@ a {
 	justify-content: space-between;
 }
 .projects-list {
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
 	width: 20%;
 	text-align: left;
 }
@@ -742,7 +743,7 @@ a {
 }
 @media (max-width: 767px) {
 	.projects {
-		padding-top: 20px;
+		padding: 20px 0;
 	}
 	.projects-wrapper {
 		width: 300px;
